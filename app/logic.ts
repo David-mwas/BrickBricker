@@ -1,5 +1,5 @@
 import { SharedValue } from "react-native-reanimated";
-import { MAX_SPEED, RADIUS } from "./constants";
+import { height, MAX_SPEED, RADIUS, width } from "./constants";
 import { CircleInterface, ShapeInterface } from "./types";
 
 export const createBouncingExample = (circleObject: CircleInterface) => {
@@ -33,6 +33,39 @@ const move = (object: ShapeInterface, dt: number) => {
     object.y.value += object.vy * dt;
   }
 };
+
+// TODO
+export const resolveWallCollision = (object: ShapeInterface) => {
+  "worklet";
+  const circleObject = object as CircleInterface;
+  // right collition
+  if (circleObject.x.value + circleObject.r > width) {
+    // Calculate the overshot
+    circleObject.x.value = width - circleObject.r * 2;
+    circleObject.vx = -circleObject.vx;
+    circleObject.ax = -circleObject.ax;
+  }
+
+  // Collision with the bottom wall
+  else if (circleObject.y.value + circleObject.r > height) {
+    circleObject.y.value = height - circleObject.r * 2;
+    circleObject.vy = -circleObject.vy;
+    circleObject.ay = -circleObject.ay;
+  }
+  // Collision with the left wall
+  else if (circleObject.x.value - circleObject.r < 0) {
+    circleObject.x.value = circleObject.r * 2;
+    circleObject.vx = -circleObject.vx;
+    circleObject.ax = -circleObject.ax;
+  }
+
+  // Detect collision with the top wall
+  else if (circleObject.y.value - circleObject.r < 0) {
+    circleObject.y.value = circleObject.r;
+    circleObject.vy = -circleObject.vy;
+    circleObject.ay = -circleObject.ay;
+  }
+};
 export const animate = (
   objects: ShapeInterface[],
   timeSincePreviousFrame: number,
@@ -42,6 +75,11 @@ export const animate = (
   for (const o of objects) {
     if (o.type === "Circle") {
       move(o, 0.15);
+    }
+  }
+  for (const o of objects) {
+    if (o.type === "Circle") {
+      resolveWallCollision(o);
     }
   }
 };
