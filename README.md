@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# Brick Breaker Game
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A captivating **Brick Breaker Game** built with **React Native**, utilizing **Expo**, **Reanimated**, and **React-Native-Skia** for smooth animations and enhanced performance. This project demonstrates advanced techniques in gesture handling, physics-based animations, and canvas rendering for a seamless gaming experience.
 
-## Get started
+<div align="center">
+<img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.50 PM.jpeg" width="250"/>
+<img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.50 PM (1).jpeg" width="250"/>
+ <img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.55 PM.jpeg" width="250"/>
 
-1. Install dependencies
+  <img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.53 PM.jpeg" width="250"/>
+  <img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.52 PM.jpeg" width="250"/>
+  <img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.55 PM (1).jpeg" width="250"/>
+  
+</div>
+
+## Features
+
+- **Dynamic Gameplay**: Interactive paddle to break all the bricks.
+- **Smooth Animations**: Powered by Reanimated and Skia.
+- **Gesture Detection**: Move the paddle with touch gestures for precise control.
+- **Responsive Design**: Optimized for different screen dimensions.
+- **Win or Lose Conditions**: Clear all bricks to win or let the ball fall to lose.
+- **Real-time Collision Detection**: Physics-based interactions for paddle, ball, and bricks.
+
+## Tech Stack
+
+- **React Native**: Framework for building the game.
+- **Expo**: Streamlined development and testing.
+- **React-Native-Skia**: Canvas rendering for graphics.
+- **Reanimated**: Handles animations and physics.
+- **React-Native-Gesture-Handler**: Gesture control for paddle movement.
+
+## Gameplay
+
+1. **Start the Game**: The ball starts bouncing, and the paddle can be controlled via gestures.
+2. **Break Bricks**: Aim to hit and break all the bricks on the screen.
+3. **Winning Condition**: Successfully clear all the bricks.
+4. **Losing Condition**: Letting the ball fall below the paddle.
+
+## Installation
+
+1. Clone the repository:
 
    ```bash
-   npm install
+   git clone https://github.com/David-mwas/BrickBricker.git
+   cd BrickBricker
    ```
 
-2. Start the app
+   ## Starting the Game
+
+1. Make sure you have [Bun](https://bun.sh) installed on your machine. OR use npm
+1. Clone the repository:
 
    ```bash
-    npx expo start
+   bun start or npm start
    ```
 
-In the output, you'll find options to open the app in a
+## How to Play
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Launch the app on your device or emulator.
+2. Drag the paddle left or right to control it.
+3. Break all bricks to win.
+4. Avoid letting the ball fall off the screen!
