@@ -1,6 +1,6 @@
 # Brick Breaker Game
 
-A captivating **Brick Breaker Game** built with **React Native**, utilizing **Expo**, **Reanimated**, and **React-Native-Skia** for smooth animations and enhanced performance. This project demonstrates advanced techniques in gesture handling, physics-based animations, and canvas rendering for a seamless gaming experience.
+A **Brick Breaker Game** built with **React Native**, utilizing **Expo**, **Reanimated**, and **React-Native-Skia** for smooth animations and enhanced performance. This project demonstrates advanced techniques in gesture handling, physics-based animations, and canvas rendering for a seamless gaming experience.
 
 <div align="center">
 <img src="assets/img/WhatsApp Image 2024-11-22 at 1.46.50 PM.jpeg" width="250"/>
